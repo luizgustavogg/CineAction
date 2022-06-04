@@ -224,3 +224,63 @@ a {
 .header-title button:hover {
   background: #f0f0f0;
 }
+
+section .footer{
+  margin-top: 30px;
+}
+
+.footer {
+  padding: 40px;
+  margin-top: 100px;
+  color: #fff;
+}
+
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer a{
+  color: #fff;
+}
+.footer-text{
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+}
+.footer-title{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: .89em;
+}
+
+.footer-title a{
+  color: rgb(153, 153, 153);
+  transition: all 0.2s ease;
+}
+
+.footer-title a:hover{
+  color: rgb(204, 204, 204);
+}
+
+.footer-button {
+  margin-top: 30px;
+}
+
+.footer-button button{
+  cursor: pointer;
+  padding: 10px;
+  background: black;
+  color: rgb(153, 153, 153);
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.footer-button button:hover{
+  color: rgb(204, 204, 204);
+  border: 1px solid rgb(204, 204, 204);
+}
