@@ -284,3 +284,7 @@ section .footer{
   color: rgb(204, 204, 204);
   border: 1px solid rgb(204, 204, 204);
 }
+
+.card{
+  margin-top: 1f0px;
+}

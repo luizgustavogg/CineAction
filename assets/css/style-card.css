@@ -1,0 +1,30 @@
+.card-content {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+  }
+  
+  .card-title {
+    margin-top: 200px;
+    background-color: rgba(255, 255, 255, 0.062) ;
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  .card-title h2{
+      color: #fff;
+  }
+  
+  .input label{
+    color: #fff;
+  }
+
+  .input button{
+      cursor: pointer;
+      background-color: red;
+      padding: 10px;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      width: 100%;
+    }
