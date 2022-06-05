@@ -6,35 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="../../assets/css/style-card.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-card.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <div class="nav-itens">
-      <div class="nav-logo">
-        <a href="../index.html"><img src="../img/logo.jpg" alt=""></a>
-      </div>
-      <ul class="main-nav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="#">Catalogo</a></li>
-      </ul>
+<?php include_once('../nav.php'); ?>
+<?php session_start();
 
-      <ul class="main-nav profile">
+if(isset($_SESSION['logado'])){
+  echo "
+  <script>
+    location.href='../index.php';
+  </script>";
+}
 
-        <li><a href="login.html">Editar o Email</a></li>
-      </ul>
-    </div>
-  </nav>
+?>
 
   <section class="card">
     <div class="card-content">
       <div class="card-title" id="login">
-        <h2>Excluir a Conta</h2>
-
+        <h2>Redefinir Senha</h2>
+        <form method="" action="">
+        <div class="error-txt"></div>
         <div class="card-itens">
           <div class="input-group">
             <label class="input-label">Email</label>
@@ -47,6 +43,12 @@
             <label class="input-label">Senha</label>
             <input type="password" name="senha" class="input">
           </div>
+        </div>
+        <div class="card-itens">
+          <div class="input-group">
+            <label class="input-label">Nova Senha</label>
+            <input type="password" name="senhanv" class="input">
+          </div>
 
           <div class="input-group">
             <button>Enviar</button>
@@ -56,11 +58,12 @@
           <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
               mais.</a></p>
         </div>
+    </form>
       </div>
 
     </div>
   </section>
-
+  <script src="../assets/script/rssenha.js"></script>
 </body>
 
 </html>

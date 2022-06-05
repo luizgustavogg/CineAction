@@ -13,39 +13,25 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-itens">
-      <div class="nav-logo">
-        <a href="../index.html"><img src="../img/logo.jpg" alt=""></a>
-      </div>
-      <ul class="main-nav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="#">Catalogo</a></li>
-      </ul>
-
-      <ul class="main-nav profile">
-
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </div>
-  </nav>
+  <?php include_once ('nav.php')?>
 
   <section class="card">
     <div class="card-content">
       <div class="card-title" id="login">
-        <h2>Editar o Nome</h2>
+        <h2>Editar o Email</h2>
+        <form method="" action="">
+        <div class="error-txt"></div>
+        <div class="card-itens">
+          <div class="input-group">
+            <label class="input-label">Email Atual</label>
+            <input type="email" name="email" class="input">
+          </div>
+        </div>
 
         <div class="card-itens">
           <div class="input-group">
-            <label class="input-label">Email</label>
-            <input type="email" name="email" class="input">
-          </div>
-
-          <div class="card-itens">
-            <div class="input-group">
-              <label class="input-label">Novo Nome</label>
-              <input type="text" name="nome" class="input">
-            </div>
+            <label class="input-label">Email Novo</label>
+            <input type="email" name="emailnv" class="input">
           </div>
 
           <div class="input-group">
@@ -56,11 +42,12 @@
           <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
               mais.</a></p>
         </div>
+        </form>
       </div>
 
     </div>
   </section>
-
+  <script src="../../assets/script/perfil/email.js"></script>
 </body>
 
 </html>

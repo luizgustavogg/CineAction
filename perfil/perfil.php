@@ -1,3 +1,18 @@
+<?php
+session_start();
+  if(!isset($_SESSION['logado'])){
+    $outputnome = "login";
+  }
+  else{
+    include_once('../include/include.php');
+
+    $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+  
+    $row = mysqli_fetch_assoc($sql);
+  
+    $outputnome = $row['nome'];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,22 +28,26 @@
 </head>
 
 
-<body>
-    <nav>
-        <div class="nav-itens">
-            <div class="nav-logo">
-                <a href="../index.html"><img src="../img/logo.jpg" alt=""></a>
-            </div>
-            <ul class="main-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Catalogo</a></li>
-            </ul>
 
-            <ul class="main-nav profile">
-                <li><a href="../login/login.html">Login</a></li>
-            </ul>
-        </div>
-    </nav>
+<body>
+
+<?php include_once('../vlogado.php'); ?>
+
+<nav>
+    <div class="nav-itens">
+      <div class="nav-logo">
+        <a href="../index.php"><img src="../img/logo.jpg" alt=""></a>
+      </div>
+      <ul class="main-nav">
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="catalogo/catalogo.php">Catalogo</a></li>
+      </ul>
+
+      <ul class="main-nav profile">
+        <li><a href="../rota-index.php"><?php echo $outputnome; ?></a></li>
+      </ul>
+    </div>
+</nav>
 
     <section class="perfil">
         <div class="perfil-content">
@@ -40,7 +59,7 @@
                         <div class="perfil-itens">
                             <div class="group">
                                 <label class="label">Nome</label>
-                                <label class="label">Luiz Gustavo de Sousa Marques</label>
+                                <label class="label"><?php echo $row['nome']; ?></label>
 
                             </div>
                         </div>
@@ -48,7 +67,7 @@
                         <div class="perfil-itens">
                             <div class="group">
                                 <label class="label">CPF</label>
-                                <label class="label">2134*******</label>
+                                <label class="label"><?php echo $row['cpf']; ?></label>
 
                             </div>
                         </div>
@@ -56,7 +75,7 @@
                         <div class="perfil-itens">
                             <div class="group">
                                 <label class="label">Email</label>
-                                <label class="label">Dmwkakskamkass@gmail.com</label>
+                                <label class="label"><?php echo $row['email']; ?></label>
 
                             </div>
                         </div>
@@ -70,17 +89,17 @@
 
                         <div class="perfil-itens">
                             <div class="group">
-                                <a href="#">Deslogar a conta</a>
+                                <a href="logout.php">Deslogar a conta</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="perfil-links">
                         <div class="group2">
-                            <a href="options/edit-nome.html">Alterar Nome da Conta</a>
-                            <a href="options/edit-email.html">Alterar Email da conta</a>
-                            <a href="options/edit-senha.html">Alterar Senha</a>
-                            <a href="options/edit-remove.html">Excluir a conta</a>
+                            <a href="options/edit-nome.php">Alterar Nome da Conta</a>
+                            <a href="options/edit-email.php">Alterar Email da conta</a>
+                            <a href="options/edit-senha.php">Alterar Senha</a>
+                            <a href="options/edit-remove.php">Excluir a conta</a>
                         </div>
                     </div>
                 </div>
