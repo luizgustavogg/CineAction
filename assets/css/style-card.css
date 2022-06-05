@@ -1,30 +1,93 @@
 .card-content {
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-  }
-  
-  .card-title {
-    margin-top: 200px;
-    background-color: rgba(255, 255, 255, 0.062) ;
-    padding: 30px;
-    border-radius: 5px;
-  }
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
 
-  .card-title h2{
-      color: #fff;
-  }
-  
-  .input label{
-    color: #fff;
-  }
+.card-title {
+  background-color: rgba(255, 255, 255, 0.062);
+  padding: 30px;
+  border-radius: 5px;
+}
 
-  .input button{
-      cursor: pointer;
-      background-color: red;
-      padding: 10px;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      width: 100%;
-    }
+#cadastro {
+  margin-top: 60px;
+}
+
+#login {
+  margin-top: 200px;
+}
+
+.card-title h2 {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.404);
+  padding-bottom: 30px;
+}
+
+.termos p {
+  color: #fff;
+  max-width: 500px;
+  font-size: .79em;
+}
+
+.termos a {
+  color: rgb(202, 0, 0);
+}
+
+.termos a:hover {
+  color: red;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  outline: 1px solid #fff;
+}
+
+.input-label {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transform-origin: left;
+  transition: transform .25s;
+}
+
+.input-group:focus-within label {
+  transform: translate(0, -30px) scale(.8);
+  color: #fff;
+}
+
+.input-group:focus-within input {
+  outline-color: rgb(202, 0, 0);
+}
+
+.card-itens {
+  margin-top: 30px;
+}
+
+.input-group button {
+  margin-top: 50px;
+  cursor: pointer;
+  background-color: rgb(202, 0, 0);
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.input-group button:hover {
+  background-color: red;
+}

@@ -1,0 +1,62 @@
+.perfil-content {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
+
+.perfil-title {
+  background-color: rgba(255, 255, 255, 0.062);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+#perfil {
+  margin-top: 60px;
+}
+
+.perfil-title h2 {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.404);
+  padding-bottom: 30px;
+}
+
+.perfil-itens {
+  margin-top: 20px;
+}
+
+.perfil-itens label {
+  color: #fff;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.group2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perfil-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+}
+
+.group a {
+  color: rgba(255, 255, 255, 0.904);
+}
+
+.group a:hover {
+  color: #fff;
+}
+
+.group2 a {
+  color: rgb(202, 0, 0);
+}
+
+.group2 a:hover {
+  color: red;
+}

@@ -225,7 +225,7 @@ a {
   background: #f0f0f0;
 }
 
-section .footer{
+section .footer {
   margin-top: 30px;
 }
 
@@ -235,34 +235,36 @@ section .footer{
   color: #fff;
 }
 
-.social-icons{
+.social-icons {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.footer a{
+.footer a {
   color: #fff;
 }
-.footer-text{
+
+.footer-text {
   display: flex;
   flex-direction: row;
   gap: 200px;
 }
-.footer-title{
+
+.footer-title {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: .89em;
+  font-size: .79em;
 }
 
-.footer-title a{
+.footer-title a {
   color: rgb(153, 153, 153);
   transition: all 0.2s ease;
 }
 
-.footer-title a:hover{
+.footer-title a:hover {
   color: rgb(204, 204, 204);
 }
 
@@ -270,7 +272,7 @@ section .footer{
   margin-top: 30px;
 }
 
-.footer-button button{
+.footer-button button {
   cursor: pointer;
   padding: 10px;
   background: black;
@@ -280,11 +282,16 @@ section .footer{
   transition: all 0.2s ease;
 }
 
-.footer-button button:hover{
+.footer-button button:hover {
   color: rgb(204, 204, 204);
   border: 1px solid rgb(204, 204, 204);
 }
 
-.card{
-  margin-top: 1f0px;
+.item img {
+  width: 341px;
+  height: 192px;
+}
+
+#termos-login {
+  margin-top: 50px;
 }
