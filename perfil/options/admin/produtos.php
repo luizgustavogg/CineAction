@@ -83,7 +83,7 @@ session_start();
                 <div class="input-group">
                 <div class="input-file">
                   <label>Imagem do produto</label>
-                  <input type="file" name="img" class="input">
+                  <input type="file" name="image" class="input">
                   <p>De preferencia na resolução  largura como 341 pixel e comprimento de 192 pixel </p>
                 </div>
 
@@ -102,5 +102,6 @@ session_start();
     
         </div>
       </section>
+      <script src="../../../assets/script/perfil/produto.js"></script>
 </body>
 </html>

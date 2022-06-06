@@ -15,13 +15,13 @@ continueBtn.onclick = () => {
   // Vamos começar
 
   let xhr = new XMLHttpRequest(); //criando XML objeto
-  xhr.open("POST", "action/signin.php", true);
+  xhr.open("POST", "action/produtos.php", true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         let data = xhr.response;
         if (data == "sucesso") {
-          location.href = '../index.php';
+          location.href = 'produtos.php';
         } else {
           errorText.textContent = data;
           errorText.style.display = "block";

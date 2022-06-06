@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <script src="../assets/script/users.js"></script>
+  <script src="../assets/script/catalogo.js"></script>
 </body>
 
 </html>
