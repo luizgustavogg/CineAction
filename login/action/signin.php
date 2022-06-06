@@ -15,12 +15,24 @@ if(!empty($email) && !empty($senha)){
 
   if(mysqli_num_rows($sql) > 0){ //se as credenciais dos usuários coincidiram
     $row = mysqli_fetch_assoc($sql);
+    $_SESSION['unique_id'] = $row['unique_id']; // usando esta sessão usamos unique_id de usuário em outro arquivo php
+    $_SESSION['logado'] = true;
 
-      $_SESSION['unique_id'] = $row['unique_id']; // usando esta sessão usamos unique_id de usuário em outro arquivo php
-      $_SESSION['logado'] = true;
-
+    $sql2 = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+      while($user = mysqli_fetch_assoc($sql2)){
+        $status = $user['status'];
+      }
       
-      echo "sucesso";
+      if($status == "ADMIN"){
+        $_SESSION['admin'] = true;
+        echo "sucesso";
+      }
+      
+      else{
+        echo "sucesso";
+      }
+
+
   }else{
     echo "Email ou Senha não está correto";
   } 

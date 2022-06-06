@@ -18,6 +18,9 @@
   margin-top: 200px;
 }
 
+#produtos{
+  margin-top: 60px;
+}
 .card-title h2 {
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.404);
@@ -101,4 +104,34 @@
   margin-bottom: 10px;
   border: 1px solid #f5c6cb;
   display: none;
+}
+
+.input-file{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.input-file label{
+  font-size: .99em;
+}
+
+.input-file p{
+  font-size: .79em;
+}
+
+.input-select{
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  outline: 1px solid #fff;
+}
+
+option{
+background-color: black;
+outline: 1px solid #fff;
 }

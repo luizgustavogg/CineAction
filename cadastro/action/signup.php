@@ -14,7 +14,7 @@
           echo "$email - Este email ja existe!";
       }else{
         
-        $status = "Usuario";
+        $status = "USUARIO";
         $random_id = rand(time(), 10000000);
 
         $nome = strtoupper($nome); // Transformar a String nome em caixa alta
