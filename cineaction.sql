@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Jun-2022 às 01:13
+-- Tempo de geração: 07-Jun-2022 às 03:05
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `cineaction`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
+
+CREATE TABLE `produto` (
+  `id_prod` int(11) NOT NULL,
+  `prod_unique_id` int(100) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `descricao` text NOT NULL,
+  `categoria` varchar(100) NOT NULL,
+  `img` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`id_prod`, `prod_unique_id`, `nome`, `descricao`, `categoria`, `img`) VALUES
+(9, 1315498592, 'ASD', 'sdd', 'acao', '1654562244aa3.png'),
+(10, 839946465, 'AKSJDH', 'asjkdnklasndlansdnasldnaslndklasndlknasldknaslkndalskndlnk', 'drama', '1654562806aa2.jpg');
 
 -- --------------------------------------------------------
 
@@ -42,11 +65,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `unique_id`, `nome`, `email`, `cpf`, `senha`, `status`) VALUES
-(7, 51124937, 'LG', 'dmwkakskamkass@gmail.com', '99966677755', '7f6ffaa6bb0b408017b62254211691b5', 'Usuario');
+(12, 1641193643, 'LUIZ GUSTAVO', 'dmwkakskamkass@gmail.com', '999000-***-**', '7f6ffaa6bb0b408017b62254211691b5', 'ADMIN');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`id_prod`);
 
 --
 -- Índices para tabela `users`
@@ -59,10 +88,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT de tabela `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `id_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
