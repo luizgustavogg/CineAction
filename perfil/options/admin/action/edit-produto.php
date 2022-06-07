@@ -5,7 +5,8 @@
   $nome = mysqli_real_escape_string($conn, $_POST['nome']);
   $descricao = mysqli_real_escape_string($conn, $_POST['descricao']);
   $categoria = mysqli_real_escape_string($conn, $_POST['categoria']);
-  
+  $id_prod = mysqli_real_escape_string($conn, $_POST['id_prod']);
+
   if(!empty($nome) && !empty($descricao) && !empty($categoria)){
     (strlen($descricao) > 60) ? $msg = substr($descricao, 0, 28).'...' : $msg = $descricao;
     if(isset($_FILES['image'])){ //se o arquivo for carregado
@@ -40,9 +41,8 @@
         $nome = strtoupper($nome); // Transformar a String nome em caixa alta
         
 
-        $sql2 = mysqli_query($conn, "INSERT INTO produto (prod_unique_id, nome, descricao, categoria, img)
-                              VALUES ('$random_id', '$nome', '$msg', '$categoria', '$new_img_name')");
-        if($sql){
+        $sql2 = mysqli_query($conn, "UPDATE produto SET nome = '$nome', descricao = '$msg', categoria = '$categoria', img = '$new_img_name' WHERE id_prod = '$id_prod'");
+        if($sql2){
           echo 'sucesso';
         }  
         else{

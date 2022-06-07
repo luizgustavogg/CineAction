@@ -104,6 +104,8 @@ session_start();
                             <a href="options/edit-email.php">Alterar Email da conta</a>
                             <a href="options/edit-senha.php">Alterar Senha</a>
                             <a href="options/admin/produtos.php">Cadastrar Produto</a>
+                            <a href="options/admin/registro-user.php">Registro dos Usuario</a>
+                            <a href="options/admin/registro-prod.php">Registro dos Produto</a>
                             <a href="options/edit-remove.php">Excluir a conta</a>
                         </div>
                     </div>

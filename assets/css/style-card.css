@@ -22,6 +22,11 @@
   margin-top: 60px;
 }
 
+#registro {
+  margin-top: 60px;
+  color: #fff;
+}
+
 .card-title h2 {
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.404);
@@ -143,4 +148,15 @@ label {
 
 p {
   color: #fff;
+}
+
+tr {
+  background-color: #34495e;
+  color: #fff;
+}
+
+tr button {
+  background: rgb(202, 0, 0);
+  color: #fff;
+  border-color: rgb(202, 0, 0);
 }

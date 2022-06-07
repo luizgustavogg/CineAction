@@ -16,6 +16,12 @@ session_start();
     $outputnome = $row['nome'];
     }
   }
+  $id = $_GET['id_prod'];
+
+  $sqlselect = mysqli_query($conn, "SELECT * FROM produto WHERE '$id'");
+
+  $row2 = mysqli_fetch_assoc($sqlselect);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,20 +57,20 @@ session_start();
       <section class="card">
         <div class="card-content">
           <div class="card-title" id="produtos">
-            <h2>Cadastrar produto</h2>
+            <h2>Editar produto</h2>
             <form method="" action="" enctype="multipart/form-data">
             <div class="error-txt"></div>
             <div class="card-itens">
               <div class="input-group">
                 <label class="input-label">Nome do Produto</label>
-                <input type="text" name="nome" class="input">
+                <input type="text" name="nome" class="input" value="<?php echo $row2['nome'] ?>">
               </div>
             </div>
     
             <div class="card-itens">
               <div class="input-group">
                 <label class="input-label">Descrição</label>
-                <input type="text" name="descricao" class="input">
+                <input type="text" name="descricao" class="input" value="<?php echo $row2['descricao'] ?>">
               </div>
             </div>
 
@@ -78,7 +84,7 @@ session_start();
                   <option value="romance">Romance</option>
                 </select>
             </div>
-
+ 
             <div class="card-itens">
                 <div class="input-group">
                 <div class="input-file">
@@ -97,11 +103,13 @@ session_start();
               <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
                   mais.</a></p>
             </div>
+
+            <input type="text" name="id_prod" value="<?php echo $id ?>">
             </form>
           </div>
     
         </div>
       </section>
-      <script src="../../../assets/script/perfil/produto.js"></script>
+      <script src="../../../assets/script/perfil/edit-produto.js"></script>
 </body>
 </html>

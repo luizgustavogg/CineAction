@@ -1,5 +1,12 @@
 const searchbar = document.querySelector(".catalogo-title .search input");
-usersList = document.querySelector(".catalogo-title .movie-list");
+searchBtn = document.querySelector(".catalogo-title .search button"),
+  usersList = document.querySelector(".catalog-movies .wrapper");
+
+searchBtn.onclick = () => {
+  searchbar.classList.toggle("active");
+  searchbar.focus();
+  searchbar.value = "";
+}
 
 searchbar.onkeyup = () => {
   let searchTerm = searchbar.value;
@@ -26,7 +33,7 @@ setInterval(() => {
   // Vamos começar
 
   let xhr = new XMLHttpRequest(); //criando XML objeto
-  xhr.open("GET", "php/users.php", true);
+  xhr.open("GET", "php/movie.php", true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {

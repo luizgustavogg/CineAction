@@ -11,74 +11,48 @@
 
 /* search */
 
-.container-2 input#search {
-  width: 50px;
-  height: 50px;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  background: #fff;
-  color: black;
-  padding-left: 35px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-
-  -webkit-transition: width .55s ease;
-  -moz-transition: width .55s ease;
-  -ms-transition: width .55s ease;
-  -o-transition: width .55s ease;
-  transition: width .55s ease;
+.search {
+  margin: 20px 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.container-2 input#search::-webkit-input-placeholder {
-
-  padding-bottom: 10px;
-  color: black;
+.search .text {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
 }
 
-.container-2 input#search:-moz-placeholder {
-  /* Firefox 18- */
-  color: black;
-
-
-}
-
-.container-2 input#search::-moz-placeholder {
-
-  /* Firefox 19+ */
-  color: black;
-
-}
-
-.container-2 input#search:-ms-input-placeholder {
-  color: black;
-
-
-}
-
-.container-2 .icon {
+.search input {
   position: absolute;
-  margin-left: 17px;
-  margin-top: 10px;
-  z-index: 1;
-  color: black;
+  height: 42px;
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
-.container-2 input#search:focus,
-.container-2 input#search:active {
+.search input.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search button {
+  width: 47px;
+  height: 42px;
+  border: none;
   outline: none;
-  width: 600px;
-
-}
-
-.container-2:hover input#search {
-  border-bottom: 1px solid black;
-  width: 600px;
-}
-
-.container-2:hover .icon {
   color: black;
+  background: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 17px;
 }
 
 .item-c img {
@@ -105,10 +79,12 @@ section .item-c {
 
 .wrapper .item-c {
   padding: 0 2px;
-  transition: 250ms all;
 }
 
 .wrapper .item-c:hover {
   margin: 0 40px;
-  transform: scale(1.2);
+}
+
+.wrapper {
+  color: #fff;
 }

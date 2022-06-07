@@ -13,64 +13,25 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-itens">
-      <div class="nav-logo">
-        <a href="../index.html"><img src="../img/logo.jpg" alt=""></a>
-      </div>
-      <ul class="main-nav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="#">Catalogo</a></li>
-      </ul>
-
-      <ul class="main-nav profile">
-        <li><a href="../login/login.html">Login</a></li>
-      </ul>
-    </div>
-  </nav>
+  <?php include_once('../nav.php'); ?>
 
   <section class="catalogo">
     <div class="catalogo-content">
       <div class="catalogo-title">
-        <div class="search">
-          <div class="container-2">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input type="search" id="search" placeholder="Search..." />
-          </div>
-        </div>
+      <div class="search">
+        <span class="text">Procure um filme/serie para começar a assistir</span>
+        <input type="text" placeholder="Coloque nome para pesquisar...">
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg></button>
+      </div>
       </div>
     </div>
   </section>
 
   <section class="catalog-movies">
     <div class="wrapper">
-      <div class="item-c">
-        <img src="../img/aa.png">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa2.jpg">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa3.png">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa4.jpg">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa.png">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa2.jpg">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa3.png">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa4.jpg">
-      </div>
-      <div class="item-c">
-        <img src="../img/aa.png">
-      </div>
+      
     </div>
   </section>
 
