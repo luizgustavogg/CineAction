@@ -24,7 +24,7 @@ else{
       </div>
       <ul class="main-nav">
         <li><a href="../../index.php">Home</a></li>
-        <li><a href="../../catalogo/catalogo.html">Catalogo</a></li>
+        <li><a href="../../catalogo/catalogo.php">Catalogo</a></li>
       </ul>
 
       <ul class="main-nav profile">

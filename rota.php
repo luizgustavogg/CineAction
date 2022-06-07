@@ -14,10 +14,10 @@ else{
   $row = mysqli_fetch_assoc($sql);
 
   if(!isset($_SESSION['admin'])){
-  header('Location: ../perfil/perfil.php');
+  header('Location: perfil/perfil.php');
   }
   else{
-    header('Location: ../perfil/perfil-admin.php');
+    header('Location: perfil/perfil-admin.php');
   }
 }
 ?>

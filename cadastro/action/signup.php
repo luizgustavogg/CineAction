@@ -13,14 +13,14 @@
       if(mysqli_num_rows($sql) > 0){ //se o e-mail já existe
           echo "$email - Este email ja existe!";
       }else{
-        
+        (strlen($cpf) > 6) ? $msg = substr($cpf, 0, 6).'-***-**' : $msg = $cpf;
         $status = "USUARIO";
         $random_id = rand(time(), 10000000);
 
         $nome = strtoupper($nome); // Transformar a String nome em caixa alta
 
         $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, nome, email, cpf, senha, status)
-                                      VALUES('$random_id', '$nome', '$email', '$cpf', '$senha', '$status') ");
+                                      VALUES('$random_id', '$nome', '$email', '$msg', '$senha', '$status') ");
         if($sql2){ //se esses dados inseridos
 
           $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
