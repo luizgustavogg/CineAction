@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Jun-2022 às 03:05
+-- Tempo de geração: 09-Jun-2022 às 00:55
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -41,8 +41,11 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id_prod`, `prod_unique_id`, `nome`, `descricao`, `categoria`, `img`) VALUES
-(9, 1315498592, 'ASD', 'sdd', 'acao', '1654562244aa3.png'),
-(10, 839946465, 'AKSJDH', 'asjkdnklasndlansdnasldnaslndklasndlknasldknaslkndalskndlnk', 'drama', '1654562806aa2.jpg');
+(11, 1044151072, 'BEVERLY LUFF LINN', 'Não sei', 'drama', '1654728480aa.png'),
+(12, 873564739, 'RUSSIAN DOLL', 'Não sei', 'drama', '1654728497aa2.jpg'),
+(13, 926683532, 'EDTV', 'Não sei', 'acao', '1654728515aa3.png'),
+(14, 188474748, 'THE TED BUNDY TAPES', 'Não sei', 'romance', '1654728538aa4.jpg'),
+(15, 331368557, 'GABRIEL FLUFFY IGLESIAS', 'Não sei', 'acao', '1654728564aa5.jpg');
 
 -- --------------------------------------------------------
 
@@ -65,7 +68,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `unique_id`, `nome`, `email`, `cpf`, `senha`, `status`) VALUES
-(12, 1641193643, 'LUIZ GUSTAVO', 'dmwkakskamkass@gmail.com', '999000-***-**', '7f6ffaa6bb0b408017b62254211691b5', 'ADMIN');
+(12, 1641193643, 'LUIZ GUSTAVO', 'dmwkakskamkass@gmail.com', '999000-***-**', '202cb962ac59075b964b07152d234b70', 'ADMIN');
 
 --
 -- Índices para tabelas despejadas
@@ -91,7 +94,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de tabela `users`
