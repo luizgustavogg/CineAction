@@ -11,6 +11,7 @@ body {
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -147,6 +148,9 @@ a {
 }
 
 @media (min-width: 769px) {
+  .header {
+    width: 30%;
+  }
 
   .nav-itens,
   .main-nav,
@@ -168,6 +172,10 @@ a {
 }
 
 @media (min-width: 1025px) {
+  .header {
+    width: 100%;
+  }
+
   .nav-itens {
     position: fixed;
     display: flex;
@@ -191,8 +199,10 @@ a {
   background-image: url(../../img/header-img.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+
 }
+
+
 
 .header-content {
   display: flex;
@@ -246,9 +256,15 @@ section .footer {
   color: #fff;
 }
 
+@media (min-width: 1025px) {
+  .footer-text {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .footer-text {
-  display: flex;
-  flex-direction: row;
+
   gap: 200px;
 }
 
